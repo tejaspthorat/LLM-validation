@@ -201,3 +201,251 @@ Rejected data:
 ```
 There are several ways to handle this data, It can either be sent back to the model with prompt related to that particular entry or can be handled manually
 
+Carrying out operations on the data:
+Since the data is now in a form that is parsable, several actions such as searching and sorting can now be performed
+
+Sorting the data based on gross revenue
+
+```
+sorted_data = sorted(validated, key=lambda x: x['gross'], reverse=True)
+```
+
+output:
+```
+{
+   "date":"July 23, 2023",
+   "film":"Barbie",
+   "gross":162022044
+},
+{
+   "date":"April 9, 2023",
+   "film":"The Super Mario Bros. Movie",
+   "gross":146361865
+},
+{
+   "date":"October 1, 2023",
+   "film":"The Super Mario Bros. Movie",
+   "gross":146361865
+},
+{
+   "date":"November 26, 2023",
+   "film":"The Super Mario Bros. Movie",
+   "gross":146361865
+},
+{
+   "date":"June 4, 2023",
+   "film":"Spider-Man: Across the Spider-Verse",
+   "gross":120663589
+},
+{
+   "date":"May 7, 2023",
+   "film":"Guardians of the Galaxy Vol. 3",
+   "gross":118414021
+},
+{
+   "date":"February 19, 2023",
+   "film":"Ant-Man and the Wasp: Quantumania",
+   "gross":106109650
+},
+{
+   "date":"May 28, 2023",
+   "film":"The Little Mermaid",
+   "gross":95578040
+},
+{
+   "date":"July 30, 2023",
+   "film":"Barbie",
+   "gross":93011602
+},
+{
+   "date":"April 16, 2023",
+   "film":"The Super Mario Bros. Movie",
+   "gross":92347190
+},
+{
+   "date":"October 8, 2023",
+   "film":"The Super Mario Bros. Movie",
+   "gross":92347190
+},
+{
+   "date":"October 29, 2023",
+   "film":"Five Nights at Freddy's",
+   "gross":80001780
+},
+{
+   "date":"March 26, 2023",
+   "film":"John Wick: Chapter 4",
+   "gross":73817950
+},
+{
+   "date":"May 21, 2023",
+   "film":"Fast X",
+   "gross":67017410
+},
+{
+   "date":"June 11, 2023",
+   "film":"Transformers: Rise of the Beasts",
+   "gross":61045464
+},
+{
+   "date":"July 2, 2023",
+   "film":"Indiana Jones and the Dial of Destiny",
+   "gross":60368101
+},
+{
+   "date":"April 23, 2023",
+   "film":"The Super Mario Bros. Movie",
+   "gross":59930940
+},
+{
+   "date":"October 15, 2023",
+   "film":"The Super Mario Bros. Movie",
+   "gross":59930940
+},
+{
+   "date":"October 22, 2023",
+   "film":"The Super Mario Bros. Movie",
+   "gross":59930940
+},
+{
+   "date":"March 5, 2023",
+   "film":"Creed III",
+   "gross":58370007
+},
+{
+   "date":"June 18, 2023",
+   "film":"The Flash",
+   "gross":55043679
+},
+{
+   "date":"December 17, 2023",
+   "film":"The Flash",
+   "gross":55043679
+},
+{
+   "date":"July 16, 2023",
+   "film":"Mission: Impossible – Dead Reckoning Part One",
+   "gross":54688347
+},
+{
+   "date":"November 12, 2023",
+   "film":"The Marvels",
+   "gross":46110859
+},
+{
+   "date":"January 8, 2023",
+   "film":"Avatar: The Way of Water",
+   "gross":45838986
+},
+{
+   "date":"November 19, 2023",
+   "film":"The Hunger Games: The Ballad of Songbirds & Snakes",
+   "gross":44607143
+},
+{
+   "date":"March 12, 2023",
+   "film":"Scream VI",
+   "gross":44447270
+},
+{
+   "date":"April 30, 2023",
+   "film":"The Super Mario Bros. Movie",
+   "gross":40835805
+},
+{
+   "date":"December 3, 2023",
+   "film":"Wonka",
+   "gross":39000000
+},
+{
+   "date":"April 2, 2023",
+   "film":"Dungeons & Dragons: Honor Among Thieves",
+   "gross":37205784
+},
+{
+   "date":"September 24, 2023",
+   "film":"Dungeons & Dragons: Honor Among Thieves",
+   "gross":37205784
+},
+{
+   "date":"November 5, 2023",
+   "film":"Dungeons & Dragons: Honor Among Thieves",
+   "gross":37205784
+},
+{
+   "date":"September 3, 2023",
+   "film":"The Equalizer 3",
+   "gross":34604229
+},
+{
+   "date":"August 13, 2023",
+   "film":"Barbie",
+   "gross":33833294
+},
+{
+   "date":"July 9, 2023",
+   "film":"Insidious: The Red Door",
+   "gross":33013036
+},
+{
+   "date":"January 15, 2023",
+   "film":"Black Panther: Wakanda Forever",
+   "gross":32824684
+},
+{
+   "date":"September 10, 2023",
+   "film":"The Nun II",
+   "gross":32603336
+},
+{
+   "date":"March 19, 2023",
+   "film":"Shazam! Fury of the Gods",
+   "gross":30111158
+},
+{
+   "date":"August 20, 2023",
+   "film":"Blue Beetle",
+   "gross":25030225
+},
+{
+   "date":"January 22, 2023",
+   "film":"Avatar: The Way of Water",
+   "gross":20133106
+},
+{
+   "date":"December 24, 2023",
+   "film":"The Fabelmans",
+   "gross":20000000
+},
+{
+   "date":"June 25, 2023",
+   "film":"Spider-Man: Across the Spider-Verse",
+   "gross":19003633
+},
+{
+   "date":"August 27, 2023",
+   "film":"Gran Turismo",
+   "gross":17410552
+},
+{
+   "date":"January 29, 2023",
+   "film":"Avatar: The Way of Water",
+   "gross":15968532
+},
+{
+   "date":"February 5, 2023",
+   "film":"Knock at the Cabin",
+   "gross":14127170
+},
+{
+   "date":"December 10, 2023",
+   "film":"The Boy and the Heron",
+   "gross":13011722
+},
+{
+   "date":"February 12, 2023",
+   "film":"Magic Mike's Last Dance",
+   "gross":8305317
+}
+```
+
