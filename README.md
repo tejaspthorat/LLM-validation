@@ -1,13 +1,13 @@
 # LLM-vaidation
 Pydantic validation of LLM response
 
-#Web Scraping and Structured Data Extraction
+# Web Scraping and Structured Data Extraction
 This project utilizes prompt engineering and Pydantic validation to extract structured data from a specified URL using large language models. The process is outlined as follows:
 
-###Step 1: Data Extraction
+### Step 1: Data Extraction
 To extract data from a provided URL, we leverage BeautifulSoup and an HTML parser for web page scraping.
 
-###Step 2: Define Pydantic Schema
+### Step 2: Define Pydantic Schema
 Once the data is obtained, we define a Pydantic schema that represents the entities to be extracted. This schema serves as a blueprint for the expected structure of the output.
 For the given use case, schema used is
 ```
@@ -18,7 +18,7 @@ class WebScrape1(BaseModel):
 
 ```
 
-###Step 3: Model Execution
+### Step 3: Model Execution
 The Pydantic schema is passed to the language model as a prompt, along with instructions to generate output in JSON format. If the model fails to produce JSON output, an error handling function retries the process, incorporating the error message.
 
 This retry mechanism persists until the desired structured output is obtained, ensuring robustness in the face of potential model failures.
@@ -34,7 +34,7 @@ def handle_validation_failure(error, prompt, num_tries):
 
 ```
 
-###Step 4: Pydantic Validation
+### Step 4: Pydantic Validation
 Once the output is generated in a JSON-compatible format, it undergoes validation using Pydantic. This validation ensures that the JSON data adheres to the specified schema, eliminating missing data or incorrect data types.
 
 
